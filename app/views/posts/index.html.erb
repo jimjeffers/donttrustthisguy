@@ -1,0 +1,11 @@
+<h1>Posts</h1>
+<% if !@posts.blank? %>
+  <h2><%= link_to "New Post", new_post_path %></h2>
+  <ul class="posts">
+  <% for post in @posts %>
+    <li class="post <%= post.type %>" id="post_<%= post.id %>"><%= link_to post.title, edit_post_url(post) %></li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>Sorry.. no posts. <%= link_to "Why don't you make a new one?", new_post_path %></p>
+<% end %>

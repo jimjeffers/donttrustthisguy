@@ -1,3 +1,7 @@
 class Post < ActiveRecord::Base
-  belongs_to :category
+  validates_uniqueness_of :title
+  validates_presence_of :title
+  validates_presence_of :content
+  
+  TYPES = ['idea','design','quote','essay']
 end

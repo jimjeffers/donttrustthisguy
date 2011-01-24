@@ -1,0 +1,10 @@
+<h1>Login</h1>
+<ul class="form">
+  <% form_tag login_path, :method => :post do %>
+    <ul class="form">
+      <li><%= label_tag :super_user_name, "Username" %><%= text_field_tag :super_user_name %></li>
+      <li><%= label_tag :super_user_pass, "Password" %><%= password_field_tag :super_user_pass %></li>
+    </ul>
+    <%= submit_tag "Submit" %>
+  <% end %>
+</ul>

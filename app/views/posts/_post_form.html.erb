@@ -1,0 +1,9 @@
+<% form_for @post do |f| -%>
+  <%= error_messages_for @post %>
+  <ul class="form">
+    <li><%= f.label :title, "Title" %><%= f.text_field :title %></li>
+    <li><%= f.label :type, "Type" %><%= f.select :type, Post::TYPES %></li>
+    <li class="post_content"><%= f.label :content, "Content" %><%= f.text_area :content %></li>
+    <li><%= f.submit "Submit" %></li>
+  </ul>
+<% end -%>

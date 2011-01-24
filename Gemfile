@@ -20,8 +20,10 @@ gem 'ruby-debug19'
 # gem 'bj'
 # gem 'nokogiri'
 
-gem "paperclip", "~> 2.3"
+gem 'dynamic_form', '~> 1.1.3'
+gem 'paperclip', '~> 2.3'
 gem 'aws-s3', :require => 'aws/s3'
+gem 'jquery-rails', '>= 0.2.6'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

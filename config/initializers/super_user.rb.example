@@ -1,0 +1,2 @@
+SUPERUSER_NAME = "admin"
+SUPERUSER_PASS = "admin"

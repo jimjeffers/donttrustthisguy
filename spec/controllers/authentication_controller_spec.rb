@@ -12,7 +12,7 @@ describe AuthenticationController do
   describe "GET 'logout'" do
     it "should be successful" do
       get 'logout'
-      response.should be_success
+      response.should redirect_to(login_path)
     end
   end
 

@@ -28,15 +28,19 @@ class PostsController < ApplicationController
   end
   
   def index
-    @posts = Post.all
+    @posts = Post.all(:order => "created_at ASC")
   end
   
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
     if @post.destroy
       redirect_to posts_url
     else
       render :edit
     end
+  end
+  
+  def show
+    @post = Post.find_by_slug(params[:id])
   end
 end

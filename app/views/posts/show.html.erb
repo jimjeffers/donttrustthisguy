@@ -1,0 +1,9 @@
+<article>
+  <hgroup>
+  <h1><%= @post.title %></h1>
+  <h2><%= @post.created_at %></h2>
+  </hgroup>
+  <section>
+    <%= raw @post.content %>
+  </section>
+</article>
